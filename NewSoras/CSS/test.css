@@ -1,0 +1,166 @@
+html body{
+  margin: 0;
+  padding: 0;
+}
+body{
+  display: grid;
+  grid-template-columns: 150px 80vw;
+  height: 110vh;
+  width: 10vw;
+  -ms-overflow-style: none;
+  color: white;
+
+  /* NOTE: 배경 */
+  background-image:url("../img/biography/background.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-size: cover;
+
+  /* NOTE: 뒷배경 흐리게 */
+  background-color: rgba(0, 0, 0, .4);
+  background-blend-mode: overlay;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+.navbar{
+  padding: 0 0;
+  /* NOTE: 나비바 맨 앞으로 가져오기 */
+  position: relative;
+  z-index: 9998!important;
+}
+.container-fluid{
+  margin-top: 40px;
+  font-size: 25px;
+  letter-spacing: 1.3px;
+  animation: fadein 3s 2s linear;
+  animation-fill-mode:backwards;
+}
+.navbar-nav a{
+  margin-left: 30px;
+}
+.navbar-toggler-icon {
+  width: 15px;
+}
+.collapse div{
+  width: 50px ;
+}
+
+.biography_containar{
+  display: grid;
+  grid-template-columns: 50% 1fr;
+
+}
+.banners{
+  text-align: left;
+  font-size: 35px;
+  margin-left: 20vw;
+  color: #0A8A8A;
+  font-family: 'Spectral SC', serif;
+  letter-spacing: 1px;
+  animation: fadein 3s 2.2s linear;
+  animation-fill-mode:backwards;
+
+}
+#banner_name{
+  margin-top : 250px;
+  transition: 0.5s;
+}
+#banner_job{
+  font-size: 12px;
+  width: 500px;
+}
+.bio_languges{
+  display: grid;
+  margin-left: 20vw;
+  grid-template-columns: 100px 100px 100px;
+  padding-top: 30px;
+  color: #aaaaaa;
+  font-size: 22px;
+  font-family: 'Neuton', serif;
+  animation: fadein 3s 2.4s linear;
+  animation-fill-mode:backwards;
+}
+.bio_languges li{
+  list-style: none;
+}
+.bio_languges li:hover{
+  color:white;
+}
+
+.bio_texts{
+  margin-top: 250px;
+  margin-left: 42vw;
+  height: 600px;
+  width: 900px;
+  overflow: hidden;
+
+}
+.bio_texts input{
+  display: none;
+}
+.bio_descriptions{
+  transition: transform 1s;
+}
+.bio_description{
+  height: 600px;
+  width: 900px;
+  padding: 20px 20px;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  font-family: 'Oxygen Mono', monospace;
+  animation: fadein 3s 2.8s linear;
+  animation-fill-mode:backwards;
+}
+@keyframes fadein {
+  0%{
+    opacity: 0;
+    margin-right: 50px;
+  }
+  20%{
+    opacity: 1;
+    margin-right: 0px;
+  }
+  80%{
+    opacity: 1;
+    margin-right: 0px;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+
+/* NOTE: 980 보다 작을떄 */
+@media (max-width : 980px){
+  .bio_texts{
+    margin-left: -60%;
+    margin-top: 300px;
+  }
+}
+
+/* NOTE: 570 보다 작을떄 */
+@media (max-width : 570px){
+ body{
+   height: 160vh;
+   background-position: center;
+   overflow: hidden;
+ }
+ .banners{
+   padding-left: 15%;
+ }
+ #banner_name{
+   padding-top : 30px;
+ }
+ .bio_languges{
+   margin-left: -25%;
+   font-size: 15px;
+ }
+ .bio_texts{
+   margin-top: 240px;
+   width: 300px;
+   height: 670px;
+   margin-left: -85%;
+   font-size: 10px;
+ }
+}

@@ -1,0 +1,177 @@
+html body{
+  margin: 0;
+  padding: 0;
+}
+
+.navbar{
+  padding: 0 0;
+  width: 1px;
+  /* NOTE: 나비바 맨 앞으로 가져오기 이거보다 더 앞으로 가져올라면 9999 로 줘야함*/
+  position: relative;
+  z-index: 9998!important;
+}
+
+.container-fluid{
+  margin-top: 60px;
+  font-size: 25px;
+  letter-spacing: 1.3px;
+  animation: fadein 3s 2s linear;
+  animation-fill-mode:backwards;
+}
+.navbar-nav a{
+  margin-left: 30px;
+}
+.navbar-toggler-icon {
+  width: 15px;
+}
+.collapse div{
+  font-family: 'Neuton', serif;
+  width: 50px ;
+}
+/* NOTE: 드롭다운 화살표 제거 */
+.dropdown-toggle:after {
+  content: none ! important
+}
+/* NOTE: dropmenu 배경 투명 */
+.dropdown-menu {
+    background-color: transparent;
+    border-color: transparent;
+}
+/* NOTE: dropitem 배경투명 */
+.dropdown-menu .dropdown-item > li > a:hover {
+  background-image: none;
+  background-color: #000!important;
+}
+/* NOTE: hover시 자식요소 보이기 */
+.navbar-nav li:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-menu
+{
+  margin-left: -7px;
+}
+.dropdown-item{
+  padding-bottom: 20px;
+  font-size: 19px;
+}
+
+.gallery_container{
+  margin-top: 80px;
+  width: 100%;
+  height: 1000px;;
+}
+.gallery_name{
+  margin-top: 40px;
+  margin-left: 165px;
+  padding-left: 22%;
+  color: #008C8C;
+  font-family: 'Cinzel', serif;
+  font-size: 44px;
+  animation: fadein 3s 2s linear;
+  animation-fill-mode:backwards;
+}
+.gallery_photos{
+  height: 1000px;
+  width: 1100px;
+  margin-top: 50px;
+  margin-left: 13%;
+  margin-right: 13%;
+  display: grid;
+  grid-template-columns:350px 310px 360px;
+}
+.photos{
+  padding-top: 20px;
+  padding-left: 10px;
+  float: left;
+}
+.photos img{
+  padding-bottom: 10px;
+  animation: fadein 3s 2s linear;
+  animation-fill-mode:backwards;
+}
+#photos_1{
+  padding-left: 50px;
+}
+#photos_1{
+  padding-right: -20px;
+}
+#photos_3{
+  margin-left: -0px;
+}
+.gallery_photos_phone{
+  display: none;
+}
+.gallery_photos_phone{
+  animation: fadein 3s 2s linear;
+  animation-fill-mode:backwards;
+}
+@keyframes fadein {
+  0%{
+    opacity: 0;
+    margin-right: 50px;
+  }
+  20%{
+    opacity: 1;
+    margin-right: 0px;
+  }
+  80%{
+    opacity: 1;
+    margin-right: 0px;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+@media (max-width : 1151px){
+  #photos_1 img{
+      width: 80%;
+  }
+  #photos_2 img{
+      width: 80%;
+    margin-left: -50px;
+  }
+  #photos_3 img{
+    width: 80%;
+    margin-left: -100px;
+  }
+}
+@media (max-width : 1024px){
+  .gallery_container{
+    margin-left: -90px;
+  }
+  .gallery_name{
+    margin-left: 110px
+  }
+}
+
+@media (max-width : 570px){
+  .gallery_container{
+    margin-left: -100px;
+  }
+  .gallery_photos{
+    width: 600px;
+  }
+  .gallery_name{
+    font-size: 25px;
+    margin-left:50px;
+  }
+  #photos_2{
+    margin-left: -60px
+  }
+  #photos_2 img{
+    width: 66.6%;
+  }
+  #photos_3{
+    display: none;
+  }
+  .gallery_photos{
+    display: none;
+  }
+  .gallery_photos_phone{
+    display: block;
+    margin-left: 140px;
+  }
+  .gallery_photos_phone img{
+    padding-bottom: 20px;
+  }
+}

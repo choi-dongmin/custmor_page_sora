@@ -1,0 +1,299 @@
+html body{
+  margin: 0;
+  padding: 0;
+  height: 1600px;
+}
+
+
+.navbar{
+  padding: 0 0;
+  width: 1px;
+  /* NOTE: 나비바 맨 앞으로 가져오기 이거보다 더 앞으로 가져올라면 9999 로 줘야함*/
+  position: relative;
+  z-index: 9998!important;
+}
+
+.container-fluid{
+  margin-top: 60px;
+  font-size: 25px;
+  letter-spacing: 1.3px;
+  animation: fadein 3s 2s linear;
+  animation-fill-mode:backwards;
+}
+.navbar-nav a{
+  margin-left: 30px;
+}
+.navbar-toggler-icon {
+  width: 15px;
+}
+.collapse div{
+  font-family: 'Neuton', serif;
+  width: 50px ;
+}
+/* NOTE: 드롭다운 화살표 제거 */
+.dropdown-toggle:after {
+  content: none ! important
+}
+/* NOTE: dropmenu 배경 투명 */
+.dropdown-menu {
+    background-color: transparent;
+    border-color: transparent;
+}
+/* NOTE: dropitem 배경투명 */
+.dropdown-menu .dropdown-item > li > a:hover {
+  background-image: none;
+  background-color: #000!important;
+}
+/* NOTE: hover시 자식요소 보이기 */
+.navbar-nav li:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-menu
+{
+  margin-left: -7px;
+}
+.dropdown-item{
+  padding-bottom: 20px;
+  font-size: 19px;
+}
+.banners{
+  width: 200px;
+  text-align: left;
+  font-size: 35px;
+  margin-left: 12%;
+  padding-top: 40px;
+  color: #FFA07A;
+  font-family: 'Spectral SC', serif;
+  letter-spacing: 1px;
+  animation: fadein 3s 2.2s linear;
+  animation-fill-mode:backwards;
+}
+
+#banner_name{
+  margin-top : 25vh;
+  transition: 0.5s;
+}
+#banner_job{
+  font-size: 12px;
+  width: 500px;
+}
+.schdule_container{
+  margin-top: -70px;
+  height: 100vh;
+}
+.schdule_accordion{
+  width: 62vw;
+  margin-left: 34%;
+  margin-top: -210px;
+}
+
+input[id*="schdulelist"]{         /* NOTE:  input 중 schdulelist 포함하는 것들*/
+  display: none;
+}
+input[id*="schdulelist"] + label{  /* NOTE:  input 중 schdulelist 포함하는 것들 바로 옆의 라벨*/
+  display: block;
+  padding: 20px;
+  border-bottom:  1px solid lightgray;
+  font-weight :900;
+  cursor: pointer;
+  animation: fadein .5s 2.5s linear;
+  animation-fill-mode:backwards;
+  /* NOTE: 배경에 그라데이션 to 지정방향 색상(투명) 에서 투명쪽으로 정지시 마지막 투명으로 이  , 배경 크기 300% 각각 33% 할당으로 100 100 100 */
+  background: linear-gradient(to right ,rgba(245, 245, 220, 0.2) 33.3%, rgba(255, 255, 255, 0) 33.4%, rgba(255, 255, 255, 0) 33.4%);
+  background-size: 300%
+}
+/* NOTE: 배경에 그라데이션 호버시 x 축으로 - 100% */
+input[id*="schdulelist"] + label:hover{
+  background-position: -100% 0;
+  transition: 2.5s;
+}
+/* NOTE: 체크시 포자션 x 로 100 만큼 더 투명색배경 정지 */
+input:checked + label {
+  background-position: -100% 0;
+}
+input[id*="schdulelist"] + label + div{ /* NOTE:  input 중 schdulelist 포함하는 것들 바로 옆의 라벨옆의 div*/
+  max-height: 0;
+  transition: all .7s;
+  overflow: hidden;
+  font-size: 11px;
+  animation: fadein 3s 2.5s linear;
+  animation-fill-mode:backwards;
+}
+
+input[id*="schdulelist"] + label + div p{
+  display: inline-block;
+  padding: 20px;
+}
+input[id*="schdulelist"]:checked + label + div{
+  max-height: 2500px;
+}
+
+#y2020-2021{
+  height: 5000px;
+}
+
+.schedule_details{
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  height: 600px;
+}
+/* NOTE: 예외적으로 info 가 적음 */
+#schedule_details_21_0{
+  height: 450px;
+}
+#schedule_details_21_1{
+  height: 550px;
+}
+#schedule_details_20_0{
+  height: 500px;
+}
+#schedule_details_20_2{
+  height: 980px;
+}
+#schedule_details_19_0{
+  height: 470px;
+}
+#schedule_details_19_2{
+  height: 800px;
+}
+.schedule_info{
+  margin-top: 40px;
+  margin-left: 35px;
+  font-size: 15px;
+  letter-spacing: 1.3px;
+}
+.schedule_info p{
+  padding-top: 50px;
+  margin-left: 15px;
+}
+.schedule_info h3{
+  margin-left: -10px;
+  letter-spacing: 0px;
+}
+.schedule_info h6{
+  margin-left: 18px;
+}
+#Haydn{
+  margin-top: 50px;
+}
+.schedule_date{
+  margin-top: 40px;
+  margin-bottom: 200px;
+  margin-left: 2%;
+  height: 100px;
+  width: 80px;
+  background-color: white;
+  border: 1px solid lightgray;
+}
+.date_box_month{
+  margin-left: 3px;
+  height: 50px;
+  width: 72px;
+  border-bottom: 1px solid gray;
+  color: black;
+  font-size: 20px;
+}
+.date_box_month p{
+  margin-left: -4px;
+  margin-top: -10px;
+}
+.date_box_day{
+  font-size: 23px;
+}
+.date_box_day p{
+  position: relative;
+  left: 10%;
+  margin-top: -13px;
+}
+#year_21_box_day_0 p{
+  font-size: 13.5px;
+  left: 5%;
+}
+#year_21_box_day_1 p{
+  left: 15%;
+}
+#year_20_box_day_0 p{
+  font-size: 13.5px;
+  left: 0%;
+}
+#year_20_box_day_1 p{
+  font-size: 12px;
+  left: 0%;
+}
+#year_20_box_day_2 p{
+  font-size: 13.5px;
+  left: 0%;
+}
+#year_19_box_day_1 p{
+  position: relative;
+  left: 14%;
+}
+#year_19_box_day_2 p{
+  font-size: 13.5px;
+  left: 0%;
+}
+
+@keyframes fadein {
+  0%{
+    opacity: 0;
+    margin-right: 50px;
+  }
+  20%{
+    opacity: 1;
+    margin-right: 0px;
+  }
+  80%{
+    opacity: 1;
+    margin-right: 0px;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+@media (max-width : 990px){
+  .banners{
+    display: none;
+  }
+  .schdule_accordion{
+    margin-top: 100px;
+    margin-left: 20%;
+  }
+  .schedule_info h3{
+    font-size: 20px;
+  }
+}
+@media (max-width : 770px){
+  .schedule_info h3{
+    font-size: 18px;
+  }
+}
+
+@media (max-width : 570px){
+  .schedule_info h3{
+    font-size: 13px;
+  }
+  .schedule_info h6{
+    font-size: 12px;
+  }
+  .schedule_info {
+    font-size: 11px;
+  }
+  .navbar-toggler-icon{
+    width: 10px;
+    height: 10px;
+  }
+  .navbar-nav a{
+    font-size: 15px;
+  }
+}
+@media (max-width : 320px){
+  .schedule_info h3{
+    font-size: 10px;
+  }
+  .schedule_info h6{
+    font-size: 9px;
+  }
+  .schedule_info {
+    font-size: 8px;
+  }
+}

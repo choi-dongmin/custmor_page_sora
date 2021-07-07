@@ -1,0 +1,224 @@
+html body{
+  margin: 0;
+  padding: 0;
+}
+
+.navbar{
+  padding: 0 0;
+  width: 1px;
+  /* NOTE: 나비바 맨 앞으로 가져오기 이거보다 더 앞으로 가져올라면 9999 로 줘야함*/
+  position: relative;
+  z-index: 9998!important;
+}
+
+.container-fluid{
+  margin-top: 60px;
+  font-size: 25px;
+  letter-spacing: 1.3px;
+  animation: fadein 3s 2s linear;
+  animation-fill-mode:backwards;
+}
+.navbar-nav a{
+  margin-left: 30px;
+}
+.navbar-toggler-icon {
+  width: 15px;
+}
+.collapse div{
+  width: 50px ;
+  font-family: 'Neuton', serif;
+}
+/* NOTE: 드롭다운 화살표 제거 */
+.dropdown-toggle:after {
+  content: none ! important
+}
+/* NOTE: dropmenu 배경 투명 */
+.dropdown-menu {
+    background-color: transparent;
+    border-color: transparent;
+}
+/* NOTE: dropitem 배경투명 */
+.dropdown-menu .dropdown-item > li > a:hover {
+  background-image: none;
+  background-color: #000!important;
+}
+/* NOTE: hover시 자식요소 보이기 */
+.navbar-nav li:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-menu
+{
+  margin-left: -7px;
+}
+.dropdown-item{
+  padding-bottom: 20px;
+  font-size: 19px;
+}
+.bio_languges{
+  display: grid;
+  margin-left: 35%;
+  grid-template-columns: 100px 100px 100px;
+  padding-top: 8vh;
+  padding-bottom:10px;
+  color: #aaaaaa;
+  font-size: 22px;
+  font-family: 'Neuton', serif;
+  animation: fadein 3s 2.4s linear;
+  animation-fill-mode:backwards;
+}
+.bio_languges li{
+  list-style: none;
+}
+.bio_languges li:hover{
+  color:black;
+  transition: 0.5s;
+}
+
+.biography_containar img{
+  margin-top: 5px;
+  margin-left: 7%;
+  animation: fadein 3s 2.4s linear;
+  animation-fill-mode:backwards;
+}
+
+
+.bio_texts{
+  margin-top: -400px;
+  margin-left:27%;
+  height: 60vh;
+  width:100%;
+  overflow: hidden;
+}
+.bio_texts input{
+  display: none;
+}
+.bio_descriptions{
+  transition: transform 1s;
+}
+.bio_description{
+  height: 60vh;
+  width: 900px;
+  margin-left: 90px;
+  padding: 20px 20px;
+  /* NOTE:  background: rgba(250, 250, 250, .3); */
+  color: rgba(76, 76, 76, 1);
+  font-family: 'Oxygen Mono', monospace;
+  font-size: 15px;
+  word-spacing: 2px;
+  border-radius: 0%;
+  animation: fadein 3s 2.8s linear;
+  animation-fill-mode:backwards;
+
+}
+@keyframes fadein {
+  0%{
+    opacity: 0;
+    margin-right: 0px;
+  }
+  20%{
+    opacity: 1;
+    margin-right: 0px;
+  }
+  80%{
+    opacity: 1;
+    margin-right: 0px;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+/* NOTE: 1151 보다 작을떄 */
+@media (max-width : 1151px){
+  .bio_texts{
+      margin-left: -200;
+      margin-top: -400px !important;
+  }
+  .bio_languges{
+    margin-left: 500px;
+    margin-top: -30px;
+  }
+  .bio_texts{
+    margin-left: 192px;
+    margin-top:  30px;
+  }
+  .bio_description{
+    height: 60vh;
+    width: 500px;
+    margin-left: 280px;
+    font-size: 13px;
+  }
+  .biography_containar img{
+    margin-left: 100px;
+  }
+}
+@media (max-width : 1024px){
+
+  .bio_languges{
+    margin-left: 400px;
+  }
+  .bio_description{
+      margin-left: 170px;
+  }
+  .biography_containar img{
+      margin-left: 50px;
+  }
+}
+@media (max-width : 768px){
+
+  .bio_texts{
+    margin-top: 20px !important;
+  }
+  .bio_languges{
+    margin-left: 200px;
+    margin-top: -20px;
+  }
+  .bio_description{
+    margin-top: 0;
+    margin-left: 0px;
+    width: 400px;
+    font-size: 12px;
+  }
+  .biography_containar img{
+    display: none;
+  }
+}
+/* NOTE: 570 보다 작을떄 */
+@media (max-width : 570px){
+ body{
+   height: 100vh;
+ }
+.bio_texts{
+  margin-left: 30px;
+}
+ .bio_languges{
+   margin-left: 50px;
+   font-size: 15px;
+ }
+ .bio_description{
+   width: 350px;
+   height: 60vh;
+   font-size: 11px;
+   word-spacing: 2px;
+   padding-left: -40%;
+ }
+
+ .navbar-toggler-icon{
+   width: 10px;
+   height: 10px;
+ }
+ .navbar-nav a{
+   font-size: 15px;
+
+
+}
+/* NOTE: 320 폴드/5s 보다 작을떄 */
+@media (max-width : 320px){
+  .bio_texts{
+    margin-left: 3.5%;
+  }
+  .bio_languges{
+    margin-left: 6%;
+  }
+
+}

@@ -1,0 +1,144 @@
+html body{
+  margin: 0;
+  padding: 0;
+}
+body{
+  display: grid;
+  grid-template-columns: 150px 80vw;
+  height: 130vh;
+  width: 10vw;
+  -ms-overflow-style: none;
+  position: relative;
+    /* NOTE: 배경 이미지 */
+  background-image:url("../img/home/background.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-size: cover;
+  background-position: 40%;
+  /* NOTE: 뒷배경 흐리게 */
+  background-color: rgba(0, 0, 0, .2);
+  background-blend-mode: overlay;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+.navbar{
+  padding: 0 0;
+  position: relative;
+  z-index: 9998!important;
+}
+.container-fluid{
+  margin-top: 40px;
+  font-size: 25px;
+  letter-spacing: 1.3px;
+  animation: fadein 3s 2s linear;
+  animation-fill-mode:backwards;
+}
+.navbar-nav a{
+  margin-left: 30px;
+}
+.navbar-toggler-icon {
+  width: 15px;
+}
+.collapse div{
+  font-family: 'Neuton', serif;
+  width: 50px ;
+}
+/* NOTE: 드롭다운 화살표 제거 */
+.dropdown-toggle:after {
+  content: none ! important
+}
+/* NOTE: dropmenu 배경 투명 */
+.dropdown-menu {
+    background-color: transparent;
+}
+/* NOTE: dropitem 배경투명 */
+.dropdown-menu .dropdown-item > li > a:hover {
+  background-image: none;
+
+  background-color: #000!important;
+}
+/* NOTE: hover시 자식요소 보이기 */
+.navbar-nav li:hover>.dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu
+{
+  margin-left: -7px;
+}
+.dropdown-item{
+  padding-bottom: 20px;
+  font-size: 20px;
+}
+
+#main_banner{
+  padding-left: 65vw;
+}
+.banners{
+  color: white;
+  text-align: left;
+  font-size: 30px;
+  font-family: 'Spectral SC', serif;
+  letter-spacing: 1px;
+  animation: fadein 3s 2.2s linear;
+  animation-fill-mode:backwards;
+}
+#banner_name{
+  padding-top : 350px;
+  transition: 0.5s;
+}
+#banner_job{
+  font-size: 12px;
+  width: 180px;
+}
+
+
+@keyframes fadein {
+  0%{
+    opacity: 0;
+    margin-right: 50px;
+  }
+  20%{
+    opacity: 1;
+    margin-right: 0px;
+  }
+  80%{
+    opacity: 1;
+    margin-right: 0px;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+/* NOTE: 991px 보다 작을떄 */
+@media (max-width : 991px){
+  .banners{
+    font-size: 25px;
+  }
+  .navbar-toggler{
+    margin-top: -15px;
+  }
+}
+
+/* NOTE: 570 보다 작을떄 */
+@media (max-width : 570px){
+  body{
+    height: 180vh;
+    background-position: 32%;
+  }
+  #main_banner{
+    margin-top: 0;
+    padding-left: 20vw;
+  }
+  .banners{
+    margin-top: 0px;
+  }
+  #banner_name{
+    padding-top : 350px;
+  }
+  .navbar-nav a{
+    font-size: 15px;
+  }
+}
